@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tb2-ext-telemetry
+spec:
+  selector:
+    app: tb2-ext-telemetry-placeholder
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb2-ext-telemetry-placeholder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tb2-ext-telemetry-placeholder
+  template:
+    metadata:
+      labels:
+        app: tb2-ext-telemetry-placeholder
+    spec:
+      containers:
+        - name: telemetry-placeholder
+          image: alpine:3.20
+          command: ["sh", "-c", "while true; do echo tb2-ext k8s placeholder; sleep 300; done"]
+          envFrom:
+            - configMapRef:
+                name: tb2-ext-config
+          ports:
+            - containerPort: 8080

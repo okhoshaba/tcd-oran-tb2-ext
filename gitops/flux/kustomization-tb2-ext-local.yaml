@@ -1,0 +1,15 @@
+# Flux bootstrap and GitRepository source definitions are not included here.
+# Replace OWNER in the matching GitRepository separately before use.
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tb2-ext-local
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k8s/overlays/local
+  prune: false
+  wait: false
+  sourceRef:
+    kind: GitRepository
+    name: tcd-oran-tb2-ext

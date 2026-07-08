@@ -1,0 +1,19 @@
+# Replace OWNER with the actual GitHub account or organization before use.
+# This is a starter template for lab-scale GitOps experiments.
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tb2-ext-local
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/OWNER/tcd-oran-tb2-ext
+    targetRevision: main
+    path: k8s/overlays/local
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tb2-ext-local
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

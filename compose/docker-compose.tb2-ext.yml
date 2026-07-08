@@ -1,0 +1,18 @@
+services:
+  # Tb2-ext starter scaffold.
+  # Replace or extend these placeholders when integrating the real Tb2 baseline.
+  tb2-ext-docs-placeholder:
+    image: alpine:3.20
+    command: ["sh", "-c", "while true; do echo tb2-ext docs placeholder; sleep 300; done"]
+    environment:
+      TB2_EXT_MODE: "${TB2_EXT_MODE:-compose}"
+      TB2_EXT_GROUP: "${TB2_EXT_GROUP:-local}"
+    restart: unless-stopped
+
+  tb2-ext-telemetry-placeholder:
+    image: alpine:3.20
+    command: ["sh", "-c", "while true; do echo tb2-ext telemetry placeholder; sleep 300; done"]
+    environment:
+      TB2_EXT_NAMESPACE: "${TB2_EXT_NAMESPACE:-tb2-ext-local}"
+      TB2_EXT_OBSERVABILITY_ENABLED: "${TB2_EXT_OBSERVABILITY_ENABLED:-true}"
+    restart: unless-stopped

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tb2-ext-config
+data:
+  TB2_EXT_MODE: "k8s"
+  TB2_EXT_COMPONENT: "placeholder"
+  TB2_EXT_OBSERVABILITY_ENABLED: "true"

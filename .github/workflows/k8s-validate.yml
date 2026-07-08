@@ -1,0 +1,14 @@
+name: k8s-validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  k8s:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Kubernetes overlays
+        run: bash tests/validate-k8s.sh

@@ -1,0 +1,32 @@
+name: Documentation task
+description: Track documentation improvements or missing explanations.
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: gap
+    attributes:
+      label: Documentation gap
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Intended audience
+      description: Instructor, student, contributor or maintainer.
+  - type: input
+    id: location
+    attributes:
+      label: Target document or directory
+      description: Example: README.md, docs/gitops.md, labs/.
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Related issues or references
+      description: Link related PRs, issues or source material if relevant.

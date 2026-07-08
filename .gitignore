@@ -1,0 +1,13 @@
+.DS_Store
+.env
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+dist/
+build/
+coverage/
+.idea/
+.vscode/
+tmp/

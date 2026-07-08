@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: tb2-ext
+  labels:
+    app.kubernetes.io/name: tb2-ext
+    app.kubernetes.io/part-of: tcd-oran-tb2-ext

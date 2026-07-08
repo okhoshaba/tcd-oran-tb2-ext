@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a scoped improvement aligned with the repository's research and education goals.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Research or educational motivation
+      description: Explain why the change improves reproducibility, GitOps readiness or teaching value.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and limitations
+      description: State what this feature will not do.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Suggested validation
+      description: Describe how the change should be checked.
