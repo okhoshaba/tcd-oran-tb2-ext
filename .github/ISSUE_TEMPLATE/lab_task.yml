@@ -1,0 +1,31 @@
+name: Lab task
+description: Track a teaching or lab-oriented task for Tb2-ext.
+title: "[Lab]: "
+labels: ["education"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Learning objective
+    validations:
+      required: true
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+  - type: input
+    id: group_model
+    attributes:
+      label: Group model
+      description: Example: local, group-template, group-01, 10-group cohort.
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Expected deliverables
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation or evidence
+      description: State what output, logs or report evidence students should provide.

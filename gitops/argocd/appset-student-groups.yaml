@@ -1,0 +1,32 @@
+# Replace OWNER and adjust the group list before use.
+# This ApplicationSet illustrates how separate student-group overlays can be tracked from Git.
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: tb2-ext-student-groups
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - group: group-01
+            namespace: tb2-ext-group-01
+            path: k8s/overlays/group-01
+          - group: group-10
+            namespace: tb2-ext-group-10
+            path: k8s/overlays/group-10
+  template:
+    metadata:
+      name: "{{group}}"
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/OWNER/tcd-oran-tb2-ext
+        targetRevision: main
+        path: "{{path}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: "{{namespace}}"
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
