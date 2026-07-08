@@ -1,13 +1,24 @@
 cff-version: 1.2.0
-title: "tcd-oran-tb2-ext"
-message: "Please cite this repository using the metadata below and update author details if needed."
+message: "If you use this software, please cite it as below."
+title: "tcd-oran-tb2-ext: Extended Software RAN Telemetry Testbed Skeleton"
 type: software
 authors:
-  - family-names: "Author"
-    given-names: "Placeholder"
-    affiliation: "To be updated"
-repository-code: "https://github.com/OWNER/tcd-oran-tb2-ext"
-abstract: "Research and education oriented implementation artefact for Tb2-ext, an extended software-only RAN telemetry testbed scaffold between Docker Compose and Kubernetes."
-license: "GPL-3.0-only"
-version: "0.1.0"
-date-released: 2026-07-08
+  - family-names: "Khoshaba"
+    given-names: "Oleksandr"
+    orcid: "https://orcid.org/0000-0001-5375-6280"
+version: "v0.1-repository-skeleton"
+doi: "10.5281/zenodo.21267113"
+date-released: "2026-07-08"
+url: "https://github.com/okhoshaba/tcd-oran-tb2-ext"
+repository-code: "https://github.com/okhoshaba/tcd-oran-tb2-ext"
+license: "GPL-3.0-or-later"
+abstract: "Initial repository skeleton for Tb2-ext, an extended software RAN telemetry testbed scaffold for reproducible Docker Compose and Kubernetes-oriented research and education."
+keywords:
+  - O-RAN
+  - srsRAN
+  - Open5GS
+  - Kubernetes
+  - Docker Compose
+  - GitOps
+  - RAN telemetry
+  - educational testbed
