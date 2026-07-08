@@ -1,5 +1,5 @@
 # tcd-oran-tb2-ext
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21267113.svg)](https://doi.org/10.5281/zenodo.21267113)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21267114.svg)](https://doi.org/10.5281/zenodo.21267114)
 
 `tcd-oran-tb2-ext` is a public research repository for Tb2-ext: an extended, reproducible, software-only RAN telemetry testbed intended for research and education on pragmatic orchestration between Docker Compose and Kubernetes.
 
@@ -7,8 +7,8 @@
 
 The initial repository skeleton is archived on Zenodo as version `v0.1-repository-skeleton`.
 
-- Version DOI: `10.5281/zenodo.21267113`
-- Concept DOI: `10.5281/zenodo.21267113`
+- Version DOI: `10.5281/zenodo.21267114`
+- Concept DOI: `10.5281/zenodo.21267114`
 
 For reproducibility, academic references to a specific state of the repository should use the version DOI.
 
