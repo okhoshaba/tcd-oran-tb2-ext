@@ -13,4 +13,4 @@ Review the repository structure and run the placeholder Compose baseline.
 
 ## Output
 
-Produce short notes on how Tb2-ext extends Tb2 at the repository and orchestration level.
+Produce short notes on how Tb2-ext extends Tb2 at the repository and orchestration level, and state clearly that the current baseline is a repository scaffold rather than a full Tb2 runtime.

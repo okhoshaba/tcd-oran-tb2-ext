@@ -2,7 +2,7 @@
 
 ## Compose Mode
 
-Compose mode is the local baseline path for quick setup.
+Compose mode is the local baseline path for quick setup of the current placeholder scaffold.
 
 1. Copy the example environment file if needed.
 2. Run `bash scripts/deploy-compose.sh`.
@@ -11,9 +11,9 @@ Compose mode is the local baseline path for quick setup.
 
 ## Kubernetes Local Mode
 
-Kubernetes mode is the local cluster path for overlay-based deployment.
+Kubernetes mode is the local cluster path for overlay-based deployment of the educational scaffold.
 
-1. Ensure the current kube-context points at a suitable local cluster.
+1. Ensure `kubectl` and `kustomize` are available and that the current kube-context points at a suitable local cluster.
 2. Run `bash scripts/deploy-k8s-local.sh`.
 3. Check namespace objects with `kubectl get all -n tb2-ext-local`.
 
@@ -27,6 +27,10 @@ Kubernetes mode is the local cluster path for overlay-based deployment.
 - `group-10` shows how the same base can scale to a larger cohort model.
 
 These are examples for educational repetition, not a full multi-tenant operations design.
+
+## GitOps Use
+
+Argo CD and Flux files in this repository are starter templates only. They require separately installed and configured controllers and should be treated as optional follow-on exercises rather than part of the default quick start.
 
 ## Cleanup
 

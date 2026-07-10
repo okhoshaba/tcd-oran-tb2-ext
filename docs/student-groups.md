@@ -2,7 +2,7 @@
 
 ## 10-Group Model
 
-Tb2-ext is designed to support repeated educational use across multiple student groups. The current repository includes a template overlay plus concrete examples for `group-01` and `group-10` to illustrate a 10-group teaching model.
+Tb2-ext is designed to support repeated educational use across multiple student groups. The current repository includes a template overlay plus concrete examples for `group-01` and `group-10` to illustrate a 10-group teaching model. It does not include fully populated overlays for every group from `02` to `09`.
 
 ## Group Namespaces
 
@@ -48,3 +48,5 @@ After each lab, students should:
 2. remove temporary local namespaces or test deployments if used;
 3. verify that no placeholder resources remain unexpectedly;
 4. document any cleanup issues in a lab task or bug report.
+
+Students should not commit secrets, credentials or cluster-specific confidential material, and their reports should state repository limitations explicitly.

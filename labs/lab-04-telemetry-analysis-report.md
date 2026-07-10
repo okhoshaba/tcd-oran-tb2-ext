@@ -12,4 +12,4 @@ Prepare a short technical report from the evidence collected in earlier labs.
 
 ## Output
 
-Submit a concise report suitable for academic review.
+Submit a concise report suitable for academic review, including explicit limitations and any missing-tool or missing-cluster constraints encountered during validation.

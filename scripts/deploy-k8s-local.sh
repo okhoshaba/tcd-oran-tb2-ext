@@ -16,5 +16,10 @@ if ! command -v kustomize >/dev/null 2>&1; then
   exit 0
 fi
 
+if ! kubectl cluster-info >/dev/null 2>&1; then
+  echo "[tb2-ext] kubectl is installed but no reachable cluster context is available. Skipping deployment."
+  exit 0
+fi
+
 kustomize build "${OVERLAY_DIR}" | kubectl apply -f -
 echo "[tb2-ext] Local Kubernetes overlay applied."

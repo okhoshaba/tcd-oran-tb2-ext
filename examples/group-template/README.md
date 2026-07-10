@@ -8,3 +8,4 @@ Recommended additions for a real group instance:
 - validation evidence;
 - short deployment diary;
 - limitations encountered.
+- confirmation that no secrets or private cluster details were committed.

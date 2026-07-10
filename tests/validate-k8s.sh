@@ -22,8 +22,12 @@ for overlay in "${OVERLAYS[@]}"; do
 done
 
 if command -v kubectl >/dev/null 2>&1; then
-  echo "[tb2-ext] kubectl detected; running client-side dry-run for local overlay"
-  kustomize build "${ROOT_DIR}/k8s/overlays/local" | kubectl apply --dry-run=client -f - >/dev/null || true
+  if kubectl cluster-info >/dev/null 2>&1; then
+    echo "[tb2-ext] kubectl detected with a reachable cluster; running client-side dry-run for local overlay"
+    kustomize build "${ROOT_DIR}/k8s/overlays/local" | kubectl apply --dry-run=client -f - >/dev/null
+  else
+    echo "[tb2-ext] kubectl detected but no reachable cluster context is available. Skipping dry-run."
+  fi
 fi
 
 echo "[tb2-ext] Kubernetes validation completed."

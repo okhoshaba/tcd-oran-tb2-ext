@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 FILES=(
   "${ROOT_DIR}/README.md"
+  "${ROOT_DIR}/CITATION.cff"
   "${ROOT_DIR}/CONTRIBUTING.md"
   "${ROOT_DIR}/CODE_OF_CONDUCT.md"
   "${ROOT_DIR}/SECURITY.md"
@@ -30,5 +31,15 @@ for file in "${FILES[@]}"; do
     exit 1
   fi
 done
+
+if ! grep -q "10.5281/zenodo.21267114" "${ROOT_DIR}/README.md"; then
+  echo "[tb2-ext] README.md does not contain the expected Zenodo DOI."
+  exit 1
+fi
+
+if ! grep -q 'version: "v0.1-repository-skeleton"' "${ROOT_DIR}/CITATION.cff"; then
+  echo "[tb2-ext] CITATION.cff does not contain the expected version string."
+  exit 1
+fi
 
 echo "[tb2-ext] Documentation validation passed."

@@ -46,8 +46,10 @@ Include screenshots, rendered output or log excerpts when they help explain a UI
 
 - [ ] I did not add unsupported claims about full O-RAN-native implementation.
 - [ ] I did not add unsupported claims about RF or OTA validation.
+- [ ] I did not add unsupported claims about SDR or COTS UE behavior.
 - [ ] I did not add unsupported claims about production-grade deployment.
 - [ ] I clearly marked placeholders, templates or unvalidated manifests where relevant.
+- [ ] I did not commit secrets, tokens, kubeconfigs or private cluster details.
 
 ## Notes
 

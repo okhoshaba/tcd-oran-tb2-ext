@@ -1,16 +1,15 @@
 # tcd-oran-tb2-ext
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21267114.svg)](https://doi.org/10.5281/zenodo.21267114)
 
-`tcd-oran-tb2-ext` is a public research repository for Tb2-ext: an extended, reproducible, software-only RAN telemetry testbed intended for research and education on pragmatic orchestration between Docker Compose and Kubernetes.
+`tcd-oran-tb2-ext` is a public research repository for Tb2-ext: an extended, reproducible, software-only RAN telemetry testbed scaffold intended for research and education on pragmatic orchestration between Docker Compose and Kubernetes.
 
 ## Software availability
 
 The initial repository skeleton is archived on Zenodo as version `v0.1-repository-skeleton`.
 
 - Version DOI: `10.5281/zenodo.21267114`
-- Concept DOI: `10.5281/zenodo.21267114`
 
-For reproducibility, academic references to a specific state of the repository should use the version DOI.
+For reproducibility, academic references to the archived `v0.1-repository-skeleton` state should use that DOI. Changes made on `main` after the tag are not part of the archived Zenodo record unless a later release and archive are created.
 
 ## Relation to Tb1, Tb2 and Tb2-ext
 
@@ -18,7 +17,7 @@ For reproducibility, academic references to a specific state of the repository s
 - `Tb2` refers to a Software RAN Telemetry Testbed drawing on `ai_nn_controller` and `CONVERGE-summer-school`.
 - `Tb2-ext` is the author’s extension of Tb2 towards reproducible deployment, Compose and Kubernetes workflows, GitOps-ready layout, and multi-group educational use.
 
-This repository does not claim to implement a full O-RAN-native RIC/xApp stack, real RF/OTA operation, or production-grade telecom deployment.
+Tb2-ext extends Tb2 rather than replacing it. This repository does not change the RF/OTA status of Tb2 and does not claim to implement a full O-RAN RIC/xApp integration testbed, SDR or COTS UE testbed, conformance-grade validation, or production-grade telecom deployment.
 
 ## Repository Scope
 
@@ -51,6 +50,16 @@ The following are starter artefacts and must be adapted before any substantive T
 - [`k8s/base/`](k8s/base) and [`k8s/overlays/`](k8s/overlays) contain educational starter manifests;
 - [`gitops/argocd/`](gitops/argocd) and [`gitops/flux/`](gitops/flux) are GitOps templates with placeholder repository ownership and source references;
 - lab and report templates are intended for guided teaching and documentation exercises.
+
+## Repository Structure
+
+- `compose/` contains the Docker Compose starter scaffold and example environment values;
+- `k8s/` contains base Kubernetes manifests and educational overlays;
+- `gitops/` contains starter Argo CD and Flux templates that require separate controller installation;
+- `docs/` contains architecture, installation, usage, testing and limitation statements;
+- `scripts/` contains helper scripts for placeholder deployment, checks and cleanup;
+- `tests/` contains repository validation scripts;
+- `labs/` and `examples/` contain teaching and reporting material.
 
 ## Quick Start: Compose Mode
 
@@ -112,12 +121,22 @@ Tb2-ext is designed to support repeated student-group deployment, comparison and
 ## Limitations
 
 - no real RF/OTA path is implemented here;
-- no full O-RAN-native RIC/xApp integration is implemented here;
+- no SDR or COTS UE baseline is implemented here;
+- no full O-RAN RIC/xApp integration is implemented here;
+- no conformance-grade testing is implemented here;
 - no production-grade security, resilience or telecom operations claim is made;
-- Kubernetes and GitOps assets are starter templates unless explicitly validated in a target environment.
+- Kubernetes and GitOps assets are starter templates unless explicitly validated in a target environment;
+- validation scripts check repository consistency and selected descriptors only, not end-to-end RAN telemetry correctness.
 
 See [`docs/limitations.md`](docs/limitations.md) for the explicit boundary statement.
 
 ## Citation
 
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff) as an editable placeholder for the academic report and future releases.
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff).
+
+Suggested citation basis for the archived repository state:
+
+- software title: `tcd-oran-tb2-ext: Extended Software RAN Telemetry Testbed Skeleton`
+- version: `v0.1-repository-skeleton`
+- DOI: `10.5281/zenodo.21267114`
+- repository URL: `https://github.com/okhoshaba/tcd-oran-tb2-ext`

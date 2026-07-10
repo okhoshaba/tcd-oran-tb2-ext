@@ -9,7 +9,8 @@ Expected content:
 - repository structure;
 - baseline documentation;
 - placeholder Compose and Kubernetes files;
-- tests and GitHub scaffolding.
+- tests and GitHub scaffolding;
+- citation metadata for the scaffolded software artefact.
 
 Validation criteria:
 
@@ -23,7 +24,8 @@ Expected content:
 
 - improved Compose-based local baseline;
 - clearer service roles;
-- stronger local validation and health checks.
+- stronger local validation and health checks;
+- tighter alignment with concrete Tb2 runtime services, where documented and reproducible.
 
 Validation criteria:
 
@@ -37,7 +39,8 @@ Expected content:
 
 - refined base manifests and overlays;
 - clearer namespace and group organization;
-- improved local Kubernetes deployment guidance.
+- improved local Kubernetes deployment guidance;
+- cautious integration of concrete Tb2-derived runtime components where documented.
 
 Validation criteria:
 
@@ -73,3 +76,14 @@ Validation criteria:
 - lab docs are internally consistent;
 - group model is documented clearly;
 - student outputs are defined and reproducible at repository level.
+
+## Later Research Work
+
+Possible later milestones, if separately implemented and validated, may include:
+
+- xApp-like demos for teaching or workflow illustration;
+- real near-RT RIC experimentation, for example with FlexRIC or OSC-derived components;
+- broader educational validation across repeated cohorts;
+- benchmarking, multi-cluster studies or stronger tenant isolation experiments.
+
+These are future-work directions only. They are not implemented in the current repository skeleton and should not be described as present capabilities.

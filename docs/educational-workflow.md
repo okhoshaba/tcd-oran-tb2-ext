@@ -29,7 +29,7 @@ The repository is designed for repeated use by multiple student groups. Each gro
 
 ## 10-Group Model
 
-The included `group-10` example represents the upper end of a simple cohort example and shows how the same base layout can be reused for larger teaching groups.
+The included `group-10` example represents the upper end of a simple cohort example and shows how the same base layout can be reused for larger teaching groups. Only `group-template`, `group-01` and `group-10` are included in the repository; groups `02` to `09` are illustrative naming slots, not implemented overlays.
 
 ## Lab Sequence
 
@@ -59,3 +59,5 @@ Assessment can combine:
 ## Cleanup Responsibilities
 
 Students should remove their local placeholder resources after each lab and verify that namespaces or Compose services are not left running unintentionally.
+
+Students should also avoid committing secrets, kubeconfigs, tokens or private cluster details to the repository, and should not overclaim RF/OTA, conformance-grade or production-grade results in reports.

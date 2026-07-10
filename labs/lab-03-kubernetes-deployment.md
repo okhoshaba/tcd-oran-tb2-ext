@@ -12,4 +12,4 @@ Render and apply the local Kustomize overlay on a suitable local cluster.
 
 ## Output
 
-Describe how the overlay model supports repeated student-group deployment.
+Describe how the overlay model supports repeated student-group deployment and why it should not be presented as production-grade multi-tenant isolation.

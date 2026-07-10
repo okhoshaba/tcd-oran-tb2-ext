@@ -12,4 +12,4 @@ Use the repository health and telemetry checks to understand the observability s
 
 ## Output
 
-Summarize the limits of placeholder observability and propose one concrete extension.
+Summarize the limits of placeholder observability, including that these checks do not prove end-to-end RAN telemetry correctness, and propose one concrete extension.

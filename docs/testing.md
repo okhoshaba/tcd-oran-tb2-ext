@@ -8,7 +8,7 @@ Validation in this repository is intentionally lightweight. The goal is to confi
 
 - `docker compose config` for Compose syntax, when Docker Compose is available
 - `kustomize build` for overlay rendering, when Kustomize is available
-- `kubectl` dry-run style validation where an active cluster and compatible command path are available
+- `kubectl` client-side dry-run style validation where a reachable cluster context and compatible command path are available
 - script-based health and telemetry checks
 - documentation existence checks
 
@@ -20,8 +20,8 @@ Validation in this repository is intentionally lightweight. The goal is to confi
 
 ## Expected Outcome
 
-The validation scripts should succeed on a minimally prepared development machine, or degrade gracefully with explicit skip messages when an optional tool is missing.
+The validation scripts should succeed on a minimally prepared development machine, or degrade gracefully with explicit skip messages when an optional tool or cluster context is missing.
 
 ## Limits
 
-These checks do not prove production readiness, telecom correctness or end-to-end RAN operation. They only validate the current repository scaffold.
+These checks do not prove production readiness, telecom correctness or end-to-end RAN telemetry correctness. They only validate the current repository scaffold and selected descriptors.
